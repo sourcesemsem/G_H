@@ -32,7 +32,7 @@ _get_repolink () {
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3NvdXJjZXNlbXNlbS9HX3MxLmdpdA" | base64 -d`
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2ptdGhvbnIvam11Yg" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3NvdXJjZXNlbXNlbS9HX3Mx" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
@@ -89,7 +89,7 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    جار بدء جمثون    "
+    echo "    جار بدء سيمو    "
     echo "
 
     "
